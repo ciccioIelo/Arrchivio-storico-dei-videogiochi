@@ -3,9 +3,9 @@ html, body {
   height: 100vh;
   margin: 0;
   font-family: "Poppins", sans-serif;
-  background: linear-gradient(135deg, #2a2a2a, #3e3e3e); /* Sfondo uniforme */
   color: white;
   display: flex;
+  overflow-x: hidden;
 }
 
 /* Layout principale con sidebar fissa */
@@ -17,6 +17,7 @@ html, body {
 
 /* Sidebar moderna */
 .sidebar {
+  background: linear-gradient(135deg, #2a2a2a, #3e3e3e); /* Sfondo uniforme */
   color: white;
   padding: 1.5rem;
   height: 100vh;
@@ -89,6 +90,7 @@ header {
   justify-content: center;
   gap: 15px;
   margin-top: 20px;
+  margin-bottom:100px;
 }
 
 #timeline-wrapper {
@@ -117,6 +119,7 @@ header {
 #timeline .card:hover {
   transform: scale(1.05);
   box-shadow: 4px 4px 15px rgba(255, 255, 255, 0.3);
+  cursor: pointer;
 }
 
 /* Uniforma le immagini */
@@ -134,7 +137,6 @@ button#prevBtn, button#nextBtn {
   font-size: 20px;
   cursor: pointer;
   border-radius: 50%;
-  transition: background 0.3s ease-in-out;
 }
 
 button#prevBtn:hover, button#nextBtn:hover {
@@ -144,9 +146,14 @@ button#prevBtn:hover, button#nextBtn:hover {
 /* Footer */
 footer {
   text-align: center;
-  padding: 15px;
-  border-radius: 10px;
-  margin-top: 20px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(135deg, #2a2a2a, #3e3e3e); /* Sfondo uniforme */
+  color: white;
+  padding: 10px; /* Ridotta altezza */
+  font-size: 0.9rem; /* Riduzione del testo */
 }
 
 /* Media Query per dispositivi mobili */
